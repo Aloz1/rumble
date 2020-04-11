@@ -28,23 +28,7 @@ namespace carbon.api.Controllers
         [Route("")]
         public IActionResult Index()
         {
-
-            var testObjs =  _readOnlyRepository.Table<Test, Guid>();
-
-            var viewObj = new HomeDto();
-
-            viewObj.NameValues = new List<TestDto>();
-            
-            foreach (var testObj in testObjs)
-            {
-                viewObj.NameValues.Add(new TestDto()
-                {
-                    Name = testObj.Name,
-                    Value = testObj.Value
-                });
-            }
-            
-            return View(viewObj);
+            return View();
         }
 
         [AllowAnonymous]

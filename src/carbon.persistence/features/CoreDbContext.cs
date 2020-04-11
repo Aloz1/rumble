@@ -17,8 +17,6 @@ namespace carbon.persistence.features
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Test> Test { get; set; }
-        
         public DbSet<CoreUser> CoreUsers { get; set; }
 
         public DbSet<Country> Countries { get; set; }
