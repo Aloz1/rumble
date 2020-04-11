@@ -1,14 +1,6 @@
-# CARBON EVENT (Scout)
+# Rumble (Scout)
 
 ### Major Events Framwork
-
-#### TODO
-- [ ] Full application setup
-- [ ] Contingents
-- [ ] Approval Process
-
-
-#### Built for Moot2023 Project
 
 #### Works leveraged
 
