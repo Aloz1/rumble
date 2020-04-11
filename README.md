@@ -8,4 +8,4 @@ Angular authentication for Identity Server 4 [from here](https://fullstackmark.c
 
 Example db startup
 
-```connectionString="server=zeryter.xyz;user=#######;password=#########" dropAll=true startingData=true dbName=carbonTest```
+```connectionString="server=127.0.0.1;user=root;" dropAll=false startingData=true dbName=rumble```
