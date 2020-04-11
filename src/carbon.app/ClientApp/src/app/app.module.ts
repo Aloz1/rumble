@@ -23,10 +23,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from "./admin/admin.component";
 import { PrivacyComponent } from "./info-pages/privacy.component";
 
-import { ApplicationComponent } from "./application/application.component";
-import { ApplicationPreliminaryComponent } from "./application/application-preliminary.component";
-import { ApplicationPreliminaryBulkComponent } from "./application/application-preliminary-bulk.component";
-
 import { AppLoaderService } from "./components/loading/app-loader-service.component";
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { NavFooterComponent } from './components/nav-footer/nav-footer.component';
@@ -68,9 +64,6 @@ export function load(http: HttpClient): (() => Promise<boolean>) {
     NavFooterComponent,
     HomeComponent,
     AdminComponent,
-    ApplicationComponent,
-    ApplicationPreliminaryComponent,
-    ApplicationPreliminaryBulkComponent,
     ProfileComponent,
     PrivacyComponent,
 
@@ -92,10 +85,7 @@ export function load(http: HttpClient): (() => Promise<boolean>) {
       { path: 'profile', component: ProfileComponent },
       { path: 'admin', component: AdminComponent },
       { path: 'callback', component: CallbackComponent },
-      { path: 'privacy', component: PrivacyComponent },
-      //{ path: 'application', component: ApplicationComponent},
-      { path: 'application-preliminary', component: ApplicationPreliminaryComponent},
-      { path: 'application-preliminary-bulk', component: ApplicationPreliminaryBulkComponent}
+      { path: 'privacy', component: PrivacyComponent }
     ])
   ],
   providers: [
