@@ -19,33 +19,6 @@ namespace carbon.persistence.features
     
     public static class DomainExtensions
     {
-        public static void LinkApplicationItems(this Application application, IReadOnlyRepository repository, bool hasWritePermission = false)
-        {
-            if (repository.Table<ApplicationMedical,int>().Any(am=> am.ApplicationId == application.Id))
-            {
-                application.ApplicationMedical = repository.Table<ApplicationMedical, int>()
-                    .FirstOrDefault(am => am.ApplicationId == application.Id);
-            }
-            else
-            {
-                if (hasWritePermission)
-                {
 
-                    var medicalApplication = ApplicationMedical.Create(application.Id);
-                    
-                    ((IReadWriteRepository) repository).Create<ApplicationMedical, int>(medicalApplication);
-
-                    application.ApplicationMedical = medicalApplication;
-
-                }
-                else
-                {
-                    throw new CarbonDomainException("Medical Section does not exist for event Id: " 
-                                                    + application.Id + " and no write permission exists");
-                    
-                }
-            }
-        }
-        
     }
 }
