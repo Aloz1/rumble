@@ -1,6 +1,4 @@
-# Rumble (Scout)
-
-### Major Events Framwork
+# Rumble
 
 #### Works leveraged
 
